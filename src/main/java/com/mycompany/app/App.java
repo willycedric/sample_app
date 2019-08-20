@@ -11,11 +11,20 @@ public class App
     public App() {}
 
     public static void main(String[] args) {
-        System.out.println(new App().getMessage());
+        if(args.length > 0)
+          System.out.println(new App().getMessage(args[0]));
+        else
+          
+          System.out.println(new App().getMessage(""));
     }
 
-    private final String getMessage() {
-        return message;
+    private final String getMessage(String entry) {
+        if(entry != ""){
+           return entry;
+       }else{
+      
+         return message;
+       }
     }
 
 }
