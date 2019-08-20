@@ -11,7 +11,7 @@ public class App
     public App() {}
 
     public static void main(String[] args) {
-        if(args.length > 0)
+        if(args.length > 0 && args!=null)
           System.out.println(new App().getMessage(args[0]));
         else
           
